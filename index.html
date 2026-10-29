@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitCheck - BMI Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="logo" href="#">FitCheck<span>.</span></a>
+      <a class="back" href="../index.html">All projects</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="heading">BMI <span>Calculator</span></h1>
+
+    <div class="two-cols">
+      <div class="card">
+        <div class="card-inner">
+          <h2>Your details</h2>
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 65" min="1" max="500">
+
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" placeholder="e.g. 170" min="30" max="272">
+
+          <p id="error"></p>
+          <div class="btn-row">
+            <button id="calcBtn" class="main-btn">Calculate</button>
+            <button id="resetBtn" class="line-btn">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <h2>Your result</h2>
+          <div id="empty">Enter your weight and height, then press Calculate.</div>
+
+          <div id="output" class="hidden">
+            <div class="bmi-number" id="bmiValue"></div>
+            <div class="bmi-category" id="bmiCategory"></div>
+
+            <div class="scale">
+              <div class="bar">
+                <span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span>
+                <div class="marker" id="marker"></div>
+              </div>
+              <div class="labels">
+                <span>Under</span><span>Normal</span><span>Over</span><span>Obese</span>
+              </div>
+            </div>
+            <p class="note">BMI is only a rough guide. It does not replace advice from a doctor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Web Technologies project – HTML, CSS and JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
